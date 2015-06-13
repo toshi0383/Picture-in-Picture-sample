@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    switch indexPath.row {
+    case 0:
+      break
+    case 1:
+      let vc:OldStylePlayerViewController
+      if #available(iOS 9.0, *) {
+        vc = PiPOldStylePlayerViewController()
+      } else {
+        vc = OldStylePlayerViewController()
+      }
+      navigationController?.pushViewController(vc, animated: true)
+    default:
+      break
+    }
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
 
 }
 

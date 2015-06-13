@@ -108,9 +108,6 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <connections>
-                                            <segue destination="XMU-0l-IbI" kind="show" id="f75-Il-C8U"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -126,30 +123,11 @@
             </objects>
             <point key="canvasLocation" x="890" y="-412"/>
         </scene>
-        <!--Old Style Player View Controller-->
-        <scene sceneID="ptk-oF-qRG">
-            <objects>
-                <viewController id="XMU-0l-IbI" customClass="OldStylePlayerViewController" customModule="Xcode7Test" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ikj-xn-RmH"/>
-                        <viewControllerLayoutGuide type="bottom" id="GD2-5Q-kOp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HuU-5R-Je5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l7U-Pm-JG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1323" y="-661"/>
-        </scene>
         <!--AV Player View Controller-->
         <scene sceneID="lAI-AS-nIV">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="xYp-NM-8fb" customClass="ModernPlayerViewController" customModule="Xcode7Test" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6s-4r-SPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="xYp-NM-8fb" customClass="ModernPlayerViewController" customModule="Xcode7Test" customModuleProvider="target" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="1417" y="-248"/>
         </scene>
