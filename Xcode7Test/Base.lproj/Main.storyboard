@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="684" y="-890"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="4o7-y6-obz">
             <objects>
-                <tableViewController id="b5w-K1-z81" sceneMemberID="viewController">
+                <tableViewController id="b5w-K1-z81" customClass="ViewController" customModule="Xcode7Test" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bQl-U1-gGw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
