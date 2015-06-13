@@ -13,7 +13,7 @@ let url1 = NSURL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbo
 let url2 = NSBundle.mainBundle().URLForResource("503_sd_mastering_modern_media_playback", withExtension: "mov")!
 
 class OldStylePlayerViewController: UIViewController {
-  var playerView:VPlayerView!
+  private var playerView:VPlayerView!
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationController?.navigationBarHidden = true
@@ -29,19 +29,20 @@ class OldStylePlayerViewController: UIViewController {
       c?.startPictureInPicture()
     }
   }
-}
-class VPlayerView :UIView {
-  override class func layerClass() -> AnyClass {
-    return AVPlayerLayer.self
-  }
-  var player:AVPlayer {
-    get {
-      let layer: AVPlayerLayer = self.layer as! AVPlayerLayer
-      return layer.player!
+  private class VPlayerView :UIView {
+    override class func layerClass() -> AnyClass {
+      return AVPlayerLayer.self
     }
-    set {
-      let layer: AVPlayerLayer = self.layer as! AVPlayerLayer
-      layer.player = newValue
+    var player:AVPlayer {
+      get {
+        let layer: AVPlayerLayer = self.layer as! AVPlayerLayer
+        return layer.player!
+      }
+      set {
+        let layer: AVPlayerLayer = self.layer as! AVPlayerLayer
+        layer.player = newValue
+      }
     }
   }
 }
+
