@@ -14,7 +14,7 @@ let url2 = NSBundle.mainBundle().URLForResource("503_sd_mastering_modern_media_p
 
 @available(iOS 9.0, *)
 class OldStylePlayerViewController: UIViewController,AVPictureInPictureControllerDelegate {
-  private var playerView:VPlayerView!
+  private var playerView:PlayerView!
   private var pipController:AVPictureInPictureController?
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,21 +22,20 @@ class OldStylePlayerViewController: UIViewController,AVPictureInPictureControlle
     playInOldStyle()
   }
   private func playInOldStyle() {
-    playerView = VPlayerView(frame: view.frame)
+    playerView = PlayerView(frame: view.frame)
     playerView.player = AVPlayer(URL: url2)
     view.addSubview(playerView)
     playerView.player.play()
 
-    if #available(iOS 9.0, *) {
+    if AVPictureInPictureController.isPictureInPictureSupported() {
       pipController = AVPictureInPictureController(playerLayer: playerView.layer as! AVPlayerLayer)
       pipController?.delegate = self
-
     }
   }
   override func viewDidAppear(animated: Bool) {
-    pipController?.startPictureInPicture()
+//    pipController?.startPictureInPicture()
   }
-  private class VPlayerView :UIView {
+  private class PlayerView :UIView {
     override class func layerClass() -> AnyClass {
       return AVPlayerLayer.self
     }
@@ -52,6 +51,7 @@ class OldStylePlayerViewController: UIViewController,AVPictureInPictureControlle
     }
   }
   func pictureInPictureController(pictureInPictureController: AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: (Bool) -> Void) {
+    completionHandler(true)
   }
   func pictureInPictureControllerWillStartPictureInPicture(pictureInPictureController: AVPictureInPictureController) {
     print("PiP start !")
