@@ -14,8 +14,11 @@ import AVFoundation
 class ModernPlayerViewController: AVPlayerViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationController?.navigationBarHidden = true
+//    navigationController?.navigationBarHidden = true
     play()
+  }
+  override func viewWillDisappear(animated: Bool) {
+    player?.pause()
   }
   private func play() {
     if #available(iOS 9.0, *) {

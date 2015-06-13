@@ -19,7 +19,7 @@ class OldStylePlayerViewController: UIViewController, OldStylePlayerViewControll
   private var playerView:PlayerView!
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationController?.navigationBarHidden = true
+//    navigationController?.navigationBarHidden = true
     playInOldStyle()
   }
   func playInOldStyle() {
@@ -44,6 +44,9 @@ class OldStylePlayerViewController: UIViewController, OldStylePlayerViewControll
         layer.player = newValue
       }
     }
+  }
+  override func viewWillDisappear(animated: Bool) {
+    playerView.player.pause()
   }
   //
   // alternative customization is expected..
