@@ -12,24 +12,22 @@ import AVFoundation
 let url1 = NSURL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")!
 let url2 = NSBundle.mainBundle().URLForResource("503_sd_mastering_modern_media_playback", withExtension: "mov")!
 
-
-class VPlayerViewController: AVPlayerViewController {
+class OldStylePlayerViewController: UIViewController {
   var playerView:VPlayerView!
-  var urlAsset:AVURLAsset!
-  var playerItem:AVPlayerItem!
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationController?.navigationBarHidden = true
-    play()
-  }
-  private func play() {
-    if #available(iOS 9.0, *) {
-        allowsPictureInPicturePlayback = true
-    }
-    player = AVPlayer(URL: url2)
-    player?.play()
+    playInOldStyle()
   }
   private func playInOldStyle() {
+    playerView = VPlayerView(frame: view.frame)
+    playerView.player = AVPlayer(URL: url2)
+    view.addSubview(playerView)
+    playerView.player.play()
+    if #available(iOS 9.0, *) {
+      let c = AVPictureInPictureController(playerLayer: playerView.layer as! AVPlayerLayer)
+      c?.startPictureInPicture()
+    }
   }
 }
 class VPlayerView :UIView {

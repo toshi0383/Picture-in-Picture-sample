@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA90EF111B2C2A9E00F0431B /* OldStylePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90EF101B2C2A9E00F0431B /* OldStylePlayerViewController.swift */; };
 		DAFDF5901B2C08460088CD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDF58F1B2C08460088CD65 /* AppDelegate.swift */; };
 		DAFDF5921B2C08460088CD65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDF5911B2C08460088CD65 /* ViewController.swift */; };
 		DAFDF5951B2C08460088CD65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFDF5931B2C08460088CD65 /* Main.storyboard */; };
@@ -14,7 +15,7 @@
 		DAFDF59A1B2C08460088CD65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFDF5981B2C08460088CD65 /* LaunchScreen.storyboard */; };
 		DAFDF5A51B2C08460088CD65 /* Xcode7TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDF5A41B2C08460088CD65 /* Xcode7TestTests.swift */; };
 		DAFDF5B01B2C08460088CD65 /* Xcode7TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDF5AF1B2C08460088CD65 /* Xcode7TestUITests.swift */; };
-		DAFDF5BE1B2C0A740088CD65 /* VPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDF5BD1B2C0A740088CD65 /* VPlayerViewController.swift */; };
+		DAFDF5BE1B2C0A740088CD65 /* ModernPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDF5BD1B2C0A740088CD65 /* ModernPlayerViewController.swift */; };
 		DAFDF5C01B2C168B0088CD65 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFDF5BF1B2C168B0088CD65 /* AVKit.framework */; };
 		DAFDF5C21B2C16900088CD65 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFDF5C11B2C16900088CD65 /* AVFoundation.framework */; };
 		DAFDF5C41B2C1C2A0088CD65 /* 503_sd_mastering_modern_media_playback.mov in Resources */ = {isa = PBXBuildFile; fileRef = DAFDF5C31B2C1C2A0088CD65 /* 503_sd_mastering_modern_media_playback.mov */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA90EF101B2C2A9E00F0431B /* OldStylePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldStylePlayerViewController.swift; sourceTree = "<group>"; };
 		DAFDF58C1B2C08460088CD65 /* Xcode7Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xcode7Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFDF58F1B2C08460088CD65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAFDF5911B2C08460088CD65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		DAFDF5AB1B2C08460088CD65 /* Xcode7TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xcode7TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFDF5AF1B2C08460088CD65 /* Xcode7TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xcode7TestUITests.swift; sourceTree = "<group>"; };
 		DAFDF5B11B2C08460088CD65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAFDF5BD1B2C0A740088CD65 /* VPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPlayerViewController.swift; sourceTree = "<group>"; };
+		DAFDF5BD1B2C0A740088CD65 /* ModernPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModernPlayerViewController.swift; sourceTree = "<group>"; };
 		DAFDF5BF1B2C168B0088CD65 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		DAFDF5C11B2C16900088CD65 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DAFDF5C31B2C1C2A0088CD65 /* 503_sd_mastering_modern_media_playback.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 503_sd_mastering_modern_media_playback.mov; sourceTree = "<group>"; };
@@ -112,7 +114,8 @@
 				DAFDF5C31B2C1C2A0088CD65 /* 503_sd_mastering_modern_media_playback.mov */,
 				DAFDF58F1B2C08460088CD65 /* AppDelegate.swift */,
 				DAFDF5911B2C08460088CD65 /* ViewController.swift */,
-				DAFDF5BD1B2C0A740088CD65 /* VPlayerViewController.swift */,
+				DAFDF5BD1B2C0A740088CD65 /* ModernPlayerViewController.swift */,
+				DA90EF101B2C2A9E00F0431B /* OldStylePlayerViewController.swift */,
 				DAFDF5931B2C08460088CD65 /* Main.storyboard */,
 				DAFDF5961B2C08460088CD65 /* Assets.xcassets */,
 				DAFDF5981B2C08460088CD65 /* LaunchScreen.storyboard */,
@@ -271,8 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFDF5921B2C08460088CD65 /* ViewController.swift in Sources */,
+				DA90EF111B2C2A9E00F0431B /* OldStylePlayerViewController.swift in Sources */,
 				DAFDF5901B2C08460088CD65 /* AppDelegate.swift in Sources */,
-				DAFDF5BE1B2C0A740088CD65 /* VPlayerViewController.swift in Sources */,
+				DAFDF5BE1B2C0A740088CD65 /* ModernPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
