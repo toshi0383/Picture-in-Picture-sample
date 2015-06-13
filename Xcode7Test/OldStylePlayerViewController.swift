@@ -12,7 +12,7 @@ import AVFoundation
 let url1 = NSURL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")!
 let url2 = NSBundle.mainBundle().URLForResource("503_sd_mastering_modern_media_playback", withExtension: "mov")!
 
-protocol OldStylePlayerViewControllerProtocol :AVPictureInPictureControllerDelegate {
+protocol OldStylePlayerViewControllerProtocol {
   func playInOldStyle()
 }
 class OldStylePlayerViewController: UIViewController, OldStylePlayerViewControllerProtocol {
@@ -53,7 +53,7 @@ class OldStylePlayerViewController: UIViewController, OldStylePlayerViewControll
   //
 }
 @available(iOS 9.0, *)
-class PiPOldStylePlayerViewController : OldStylePlayerViewController {
+class PiPOldStylePlayerViewController : OldStylePlayerViewController, AVPictureInPictureControllerDelegate {
   private var pipController:AVPictureInPictureController?
 
   override func viewDidLoad() {
