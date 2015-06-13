@@ -12,8 +12,10 @@ import AVFoundation
 let url1 = NSURL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")!
 let url2 = NSBundle.mainBundle().URLForResource("503_sd_mastering_modern_media_playback", withExtension: "mov")!
 
-class OldStylePlayerViewController: UIViewController {
+@available(iOS 9.0, *)
+class OldStylePlayerViewController: UIViewController,AVPictureInPictureControllerDelegate {
   private var playerView:VPlayerView!
+  private var pipController:AVPictureInPictureController?
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationController?.navigationBarHidden = true
@@ -24,10 +26,15 @@ class OldStylePlayerViewController: UIViewController {
     playerView.player = AVPlayer(URL: url2)
     view.addSubview(playerView)
     playerView.player.play()
+
     if #available(iOS 9.0, *) {
-      let c = AVPictureInPictureController(playerLayer: playerView.layer as! AVPlayerLayer)
-      c?.startPictureInPicture()
+      pipController = AVPictureInPictureController(playerLayer: playerView.layer as! AVPlayerLayer)
+      pipController?.delegate = self
+
     }
+  }
+  override func viewDidAppear(animated: Bool) {
+    pipController?.startPictureInPicture()
   }
   private class VPlayerView :UIView {
     override class func layerClass() -> AnyClass {
@@ -43,6 +50,11 @@ class OldStylePlayerViewController: UIViewController {
         layer.player = newValue
       }
     }
+  }
+  func pictureInPictureController(pictureInPictureController: AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: (Bool) -> Void) {
+  }
+  func pictureInPictureControllerWillStartPictureInPicture(pictureInPictureController: AVPictureInPictureController) {
+    print("PiP start !")
   }
 }
 
