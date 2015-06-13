@@ -7,4 +7,5 @@ PiP sample in
 
 both runs only on iOS9 and later.
 
-Note: You have to run this app on *iPad Air* Simulator or device.(on device, killing app process causes OS crash..)
+Note: You have to run this app on *iPad Air* Simulator or device, or *iPad mini 2/3*.  
+    on device, killing app process causes OS crash..
