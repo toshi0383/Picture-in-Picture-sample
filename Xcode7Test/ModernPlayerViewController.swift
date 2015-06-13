@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
+@available(iOS 8.0, *)
 class ModernPlayerViewController: AVPlayerViewController {
   override func viewDidLoad() {
     super.viewDidLoad()

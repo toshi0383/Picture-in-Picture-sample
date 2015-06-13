@@ -85,9 +85,6 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <connections>
-                                            <segue destination="xYp-NM-8fb" kind="show" id="1Fl-Zt-eez"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="LXf-bF-Svo" style="IBUITableViewCellStyleDefault" id="qbk-cr-pLY">
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
@@ -122,14 +119,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbv-HM-aqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="890" y="-412"/>
-        </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="lAI-AS-nIV">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k6s-4r-SPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="xYp-NM-8fb" customClass="ModernPlayerViewController" customModule="Xcode7Test" customModuleProvider="target" sceneMemberID="viewController"/>
-            </objects>
-            <point key="canvasLocation" x="1417" y="-248"/>
         </scene>
     </scenes>
 </document>

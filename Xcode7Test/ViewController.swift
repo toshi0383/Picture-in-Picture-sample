@@ -13,7 +13,10 @@ class ViewController: UITableViewController {
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     switch indexPath.row {
     case 0:
-      break
+      if #available(iOS 8.0, *) {
+        let vc = ModernPlayerViewController()
+        navigationController?.pushViewController(vc, animated: true)
+      }
     case 1:
       let vc:OldStylePlayerViewController
       if #available(iOS 9.0, *) {
