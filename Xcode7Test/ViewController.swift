@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Xcode7Test
 //
-//  Created by tsuzuki on 2015/06/13.
+//  Created by toshi0383 on 2015/06/13.
 //  Copyright © 2015年 toshi0383. All rights reserved.
 //
 
