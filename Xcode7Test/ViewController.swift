@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
+  override func viewDidLoad() {
+    navigationController?.navigationBar.topItem?.title = "Picture-in-Picture-sample"
+  }
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     switch indexPath.row {
     case 0:
