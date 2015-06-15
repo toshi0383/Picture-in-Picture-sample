@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DAFDF58B1B2C08460088CD65 /* Xcode7Test */ = {
+		DAFDF58B1B2C08460088CD65 /* Picture-In-Picture-sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAFDF5B41B2C08460088CD65 /* Build configuration list for PBXNativeTarget "Xcode7Test" */;
+			buildConfigurationList = DAFDF5B41B2C08460088CD65 /* Build configuration list for PBXNativeTarget "Picture-In-Picture-sample" */;
 			buildPhases = (
 				DAFDF5881B2C08460088CD65 /* Sources */,
 				DAFDF5891B2C08460088CD65 /* Frameworks */,
@@ -157,7 +157,7 @@
 			);
 			dependencies = (
 			);
-			name = Xcode7Test;
+			name = "Picture-In-Picture-sample";
 			productName = Xcode7Test;
 			productReference = DAFDF58C1B2C08460088CD65 /* Xcode7Test.app */;
 			productType = "com.apple.product-type.application";
@@ -233,7 +233,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAFDF58B1B2C08460088CD65 /* Xcode7Test */,
+				DAFDF58B1B2C08460088CD65 /* Picture-In-Picture-sample */,
 				DAFDF59F1B2C08460088CD65 /* Xcode7TestTests */,
 				DAFDF5AA1B2C08460088CD65 /* Xcode7TestUITests */,
 			);
@@ -301,12 +301,12 @@
 /* Begin PBXTargetDependency section */
 		DAFDF5A21B2C08460088CD65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAFDF58B1B2C08460088CD65 /* Xcode7Test */;
+			target = DAFDF58B1B2C08460088CD65 /* Picture-In-Picture-sample */;
 			targetProxy = DAFDF5A11B2C08460088CD65 /* PBXContainerItemProxy */;
 		};
 		DAFDF5AD1B2C08460088CD65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAFDF58B1B2C08460088CD65 /* Xcode7Test */;
+			target = DAFDF58B1B2C08460088CD65 /* Picture-In-Picture-sample */;
 			targetProxy = DAFDF5AC1B2C08460088CD65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -496,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAFDF5B41B2C08460088CD65 /* Build configuration list for PBXNativeTarget "Xcode7Test" */ = {
+		DAFDF5B41B2C08460088CD65 /* Build configuration list for PBXNativeTarget "Picture-In-Picture-sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAFDF5B51B2C08460088CD65 /* Debug */,
